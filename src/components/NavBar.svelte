@@ -34,13 +34,20 @@
         <div class="nav-separator d-none d-lg-block"></div>
             <div class="d-flex align-items-center justify-content-center">
                 <p style="margin: 0 10px 0 0; font-size: 17px;" class="navbar-brand">Tema:</p>
-                <img src={sun} class="theme-icon" alt="Claro">
-                <img src={sunLight} class="theme-icon" alt="Claro" style="display: none;">
+                {#if $darkMode === false}
+                    <img src={sun} class="theme-icon" alt="Claro">
+                {:else}
+                    <img src={sunLight} class="theme-icon" alt="Claro">
+                {/if}
+                
                 <div class="form-check form-switch d-flex justify-content-center">
                     <input class="form-check-input" style="cursor: pointer;" type="checkbox" id="selectTheme" bind:checked={switchOn} on:change={handleSwitch}>
                 </div>
-                <img src={moon} alt="Oscuro" class="theme-icon" id="moon">
-                <img src={moonLight} alt="Oscuro" class="theme-icon" id="light-moon" style="display: none;">
+                {#if $darkMode === false}
+                    <img src={moon} alt="Oscuro" class="theme-icon">
+                {:else}
+                    <img src={moonLight} alt="Oscuro" class="theme-icon">
+                {/if}
             </div>
         </div>
     </div>
