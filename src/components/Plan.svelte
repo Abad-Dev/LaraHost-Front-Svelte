@@ -1,5 +1,7 @@
 <script>
     export let conf;
+    import Check from '../assets/garrapata.png';
+    import Cross from '../assets/cross.svg'
 
     import { darkMode } from './store/store';
 </script>
@@ -19,6 +21,16 @@
         </div>
         
         <hr class="separator">
+
+        {#each conf.features as feature}
+            <div class="d-flex mb-3">
+                <img src={feature.have ? Check : Cross} alt="" class="icon"/>
+                {#if feature.amount}
+                    <b>{feature.amount}</b> &nbsp;
+                {/if}
+                {feature.label}
+            </div>
+        {/each}
     </div>
 </div>
 
@@ -28,18 +40,17 @@
         flex-direction: column;
         min-height: 600px;
         border-radius: 10px;
-        margin: 5px;
+        margin: 10px 0px;
         box-shadow: 4px 3px 46px -41px rgb(0 0 0 / 17%);
         -webkit-box-shadow: 4px 3px 46px -41px rgb(0 0 0 / 17%);
         -moz-box-shadow: 4px 3px 46px -41px rgba(0,0,0,0.17);
-        padding: 15px;
+        padding: 15px 30px;
         padding-top: 20px;
         border: 1px solid var(--nav-color);
         background-color: #fff;
     }
 
     .plan > img {
-
         margin-left: auto;
         margin-right: auto;
         max-height: 170px;
@@ -49,6 +60,12 @@
         border-radius: 3px;
         margin-left: 15%;
         margin-right: 15%;
+    }
+
+    .icon{
+        max-height: 20px;
+        margin-right: 5px;
+        margin-top: 3px
     }
 
     @media (max-width: 576px){
