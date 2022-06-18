@@ -33,7 +33,7 @@
     color: #fff !important;
   }
   :global(.bg-dark-grey){
-    background-color: #212529;
+    background-color: #212529 !important;
   }
   :global(.bg-cyan){
     background-color: #D5EBFF;
