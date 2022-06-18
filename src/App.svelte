@@ -1,11 +1,13 @@
 <script>
   import NavBar from './components/NavBar.svelte';
   import Main from './components/Main.svelte';
+  import Info from './components/Info.svelte';
 </script>
 
 <main>
   <NavBar/>
   <Main/>
+  <Info/>
 </main>
 
 <style>
@@ -32,5 +34,15 @@
   }
   :global(.bg-dark-grey){
     background-color: #212529;
+  }
+  :global(.bg-cyan){
+    background-color: #D5EBFF;
+  }
+  :global(.bg-dark-cyan){
+    background-color: #3B3F43;
+  }
+  :global(.text-undlnd){
+    text-decoration: underline 0.06em var(--main-color);
+    text-underline-offset: 3px;
   }
 </style>

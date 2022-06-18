@@ -9,13 +9,13 @@
         <div class="row h-100 py-5">
             <div class="col-12 col-sm-6 text-center text-sm-start d-flex align-items-center">
                 <div>
-                    <h1 class="title">La mejor opción para comenzar o potenciar un negocio</h1>
+                    <h1 class="title text-undlnd">La mejor opción para comenzar o potenciar un negocio</h1>
                     
                     <button class={`learn-more ${$darkMode ? 'learn-more-dark' : ''}`}>
                         <span class="circle" aria-hidden="true">
                             <span class="icon arrow"></span>
                             </span>
-                        <span class="button-text">Ver Precios</span>
+                        <a class="button-text" href="#info">Ver Precios</a>
                     </button>
                 </div>
             </div>
@@ -30,7 +30,6 @@
 <style>
     .title{
         margin-bottom: 40px;
-        text-decoration: underline var(--main-color);
     }
 
     @media (max-width: 576px){
@@ -42,6 +41,11 @@
         }
     }
 
+
+    
+    a{
+        text-decoration: none;
+    }
 
     /* From uiverse.io */
     button {
@@ -94,7 +98,7 @@
     button.learn-more .circle .icon.arrow::before {
         position: absolute;
         content: "";
-        top: -0.29rem;
+        top: -0.25rem;
         right: 0.0625rem;
         width: 0.625rem;
         height: 0.625rem;
@@ -118,9 +122,6 @@
         text-align: center;
     }
 
-    button:hover .button-text{
-        color: var(--third-color) !important;
-    }
 
     button:hover .circle {
         width: 100%;
@@ -131,7 +132,20 @@
         transform: translate(1rem, 0);
     }
 
+    .learn-more-dark .circle .icon.arrow::before{
+        border-top: 0.125rem solid var(--secondary-color) !important;
+        border-right: 0.125rem solid var(--secondary-color) !important;
+    }
+
+    .learn-more-dark:hover .circle .icon.arrow{
+        background: var(--secondary-color) !important;
+    }
+
     .learn-more-dark .button-text{
         color: #fff !important;
+    }
+
+    .learn-more-dark .circle{
+        background-color: var(--dark-grey) !important;
     }
 </style>
