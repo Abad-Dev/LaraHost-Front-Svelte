@@ -2,12 +2,16 @@
   import NavBar from './components/NavBar.svelte';
   import Main from './components/Main.svelte';
   import Info from './components/Info.svelte';
+  import Contact from './components/Contact.svelte';
+  import Footer from './components/Footer.svelte';
 </script>
 
 <main>
   <NavBar/>
   <Main/>
   <Info/>
+  <Contact/>
+  <Footer/>
 </main>
 
 <style>
@@ -20,6 +24,12 @@
   }
   :global(*){
     font-family: 'Ubuntu', sans-serif;
+  }
+  :global(*::selection){
+    background-color: rgb(223, 223, 223);
+  }
+  :global(.bg-dark-grey *::selection, .bg-dark-cyan *::selection){
+    background-color: #3d3d3d;
   }
   :global(img){
     max-width: 80%;

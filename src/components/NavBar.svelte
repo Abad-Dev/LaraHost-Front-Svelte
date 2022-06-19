@@ -11,7 +11,7 @@
     }
 </script>
 
-<nav id="nav" class={`navbar navbar-expand-lg py-3 ${$darkMode ? 'navbar-dark dark-grey' : 'navbar-light grey' }`}>
+<nav id="nav" class={`navbar navbar-expand-lg py-3 ${$darkMode ? 'navbar-dark bg-dark-cyan' : 'navbar-light grey' }`}>
     <div class="container">
         <a class="navbar-brand" href="#/">
             LaraHost

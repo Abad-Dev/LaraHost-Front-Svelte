@@ -15,7 +15,7 @@
                         <span class="circle" aria-hidden="true">
                             <span class="icon arrow"></span>
                             </span>
-                        <a class="button-text" href="#info">Ver Precios</a>
+                        <a class="button-text" href="#prices">Ver Precios</a>
                     </button>
                 </div>
             </div>

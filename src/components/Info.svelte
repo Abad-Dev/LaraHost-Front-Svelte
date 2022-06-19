@@ -68,7 +68,7 @@
                 {have: true, label: 'Panel de control'},
                 {have: true, amount: 5, label: 'Base de datos'},
                 {have: true, amount: 25, label: 'Cuentas de correos'},
-                {have: true, amount: 3000, label: 'MB Espacio en disco'},
+                {have: true, amount: 4000, label: 'MB Espacio en disco'},
                 {have: true, amount: 20, label: 'GB Transferencia mensual'},
                 {have: true, amount: 5, label: 'Cuenta FTP'},
                 {have: true, label: 'Web Mail'},
@@ -88,7 +88,7 @@
                 <Plan conf={plan}/>
             {/each}
         </div>
-        <small style="color: #A2A2A2">*Para planes corporativos o personalizados, contáctenos</small>
+        <small style="color: #A2A2A2">*Para planes corporativos o personalizados, <a href="#contact" style="color: #A2A2A2">contáctenos</a></small>
     </div>
     
 </section>
