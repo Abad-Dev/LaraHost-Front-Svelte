@@ -4,6 +4,7 @@
   import Info from './components/Info.svelte';
   import Contact from './components/Contact.svelte';
   import Footer from './components/Footer.svelte';
+  import Icon from './components/Icon.svelte';
 </script>
 
 <main>
@@ -12,6 +13,7 @@
   <Info/>
   <Contact/>
   <Footer/>
+  <Icon/>
 </main>
 
 <style>

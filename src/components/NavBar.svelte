@@ -9,9 +9,16 @@
     let handleSwitch = () => {
         darkMode.set(switchOn)
     }
+
+    let navBar;
+    let linksContainer;
+    const hideNavBar = () => {
+        navBar.classList.add('collapsed')
+        linksContainer.classList.remove('show')
+    }
 </script>
 
-<nav id="nav" class={`navbar navbar-expand-lg py-3 ${$darkMode ? 'navbar-dark bg-dark-cyan' : 'navbar-light grey' }`}>
+<nav id="nav" class={`navbar navbar-expand-lg py-3 ${$darkMode ? 'navbar-dark bg-dark-cyan' : 'navbar-light grey' }`} bind:this={navBar}>
     <div class="container">
         <a class="navbar-brand" href="#/">
             LaraHost
@@ -19,16 +26,16 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" bind:this={linksContainer}>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#/">Página principal</a>
+                    <a class="nav-link active" aria-current="page" href="#/" on:click={hideNavBar}>Página principal</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#prices">Planes</a>
+                    <a class="nav-link" href="#prices" on:click={hideNavBar}>Planes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contáctenos</a>
+                    <a class="nav-link" href="#contact" on:click={hideNavBar}>Contáctenos</a>
                 </li>
             </ul>
         <div class="nav-separator d-none d-lg-block"></div>
@@ -41,7 +48,7 @@
                 {/if}
                 
                 <div class="form-check form-switch d-flex justify-content-center">
-                    <input class="form-check-input" style="cursor: pointer;" type="checkbox" id="selectTheme" bind:checked={switchOn} on:change={handleSwitch}>
+                    <input class="form-check-input" style="cursor: pointer;" type="checkbox" id="selectTheme" bind:checked={switchOn} on:change={() => {handleSwitch(); hideNavBar()}}>
                 </div>
                 {#if $darkMode === false}
                     <img src={moon} alt="Oscuro" class="theme-icon">

@@ -5,17 +5,17 @@
 <section id="contact" class={`container-fluid py-5 ${$darkMode ? 'bg-dark-grey text-light' : 'bg-white'}`}>
     <div class="container">
     <h1 class="text-undlnd text-center">Cont&aacute;ctenos</h1>
-        <form action="https://formsubmit.co/soporte@larahost.net" method="POST">
+        <form action="https://usebasin.com/f/60e9f938f674" method="POST">
             <div class="row">
                 <div class="col-12 py-2">
                     <label for="contactPlan" class='form-label'>Plan de su interés:</label>
                     <select class='form-select {$darkMode ? 'bg-dark-grey text-light' : ''}' id="contactPlan" aria-label=".form-select-sm example" name="Plan">
                         <option selected>Seleccione el plan</option>
-                        <option value="1">Plan Básico</option>
-                        <option value="2">Plan Standard</option>
-                        <option value="3">Plan Profesional</option>
-                        <option value="4">Plan Master</option>
-                        <option value="5">Plan Personalizado/Corporativo</option>
+                        <option value="Basico">Plan Básico</option>
+                        <option value="Standard">Plan Standard</option>
+                        <option value="Profesional">Plan Profesional</option>
+                        <option value="Master">Plan Master</option>
+                        <option value="Personalizado">Plan Personalizado/Corporativo</option>
                     </select>
                 </div>
                 <div class="col-12 col-lg-6">
